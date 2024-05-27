@@ -248,7 +248,7 @@ get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
   if(parallel == FALSE){
 
     #rinomino le colonne per farle accettare dalle funzioni di coortweet
-    ct_shares.df_new <- prep_data(ct_shares.df,
+    ct_shares.df_new <- CooRTweet::prep_data(ct_shares.df,
                object_id = "expanded",
                account_id = "account.url",
                content_id = "id",
