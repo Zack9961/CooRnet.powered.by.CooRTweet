@@ -28,7 +28,7 @@ Imports:
   parallel (>= 3.6),
   doSNOW (>= 1.0),
   googledrive (>= 1.0),
-  CooRTWeet (>= 1.0)
+  CooRTweet (>= 1.0)
 Encoding: UTF-8
 Roxygen: true
 RoxygenNote: 7.3.1
