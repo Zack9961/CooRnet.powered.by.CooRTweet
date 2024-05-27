@@ -125,7 +125,7 @@ get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
     doSNOW::registerDoSNOW(cl)
 
     #rinomino le colonne per farle accettare dalle funzioni di coortweet
-    ct_shares.df_new <- prep_data(ct_shares.df,
+    ct_shares.df_new <- CooRTweet::prep_data(ct_shares.df,
                                   object_id = "expanded",
                                   account_id = "account.url",
                                   content_id = "id",
@@ -140,7 +140,7 @@ get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
     coordination_interval <- coord_interval_to_numeric(coordination_interval)
 
     #Uso la funzione di coortweet per rilevare le rapid shares
-    result <- detect_groups(ct_shares.df_new,
+    result <- CooRTweet::detect_groups(ct_shares.df_new,
                             min_participation = 2,
                             time_window = coordination_interval)
 
@@ -152,7 +152,7 @@ get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
                                             (ct_shares.df$id %in% result$content_id | ct_shares.df$id %in% result$content_id_y), TRUE, FALSE)
 
     #genero il grafo usando la funzione di CooRTweet
-    highly_connected_g <- generate_coordinated_network(result,
+    highly_connected_g <- CooRTweet::generate_coordinated_network(result,
                                            edge_weight = percentile_edge_weight,
                                            objects = TRUE)
     #Ricavo le info degli account come farebbe CooRnet
@@ -262,7 +262,7 @@ get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
     coordination_interval <- coord_interval_to_numeric(coordination_interval)
 
     #Uso la funzione di coortweet per rilevare le rapid shares
-    result <- detect_groups(ct_shares.df_new,
+    result <- CooRTweet::detect_groups(ct_shares.df_new,
                             min_participation = 2,
                             time_window = coordination_interval)
 
@@ -272,7 +272,7 @@ get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
                                             (ct_shares.df$id %in% result$content_id | ct_shares.df$id %in% result$content_id_y), TRUE, FALSE)
 
     #genero il grafo usando la funzione di CooRTweet
-    highly_connected_g <- generate_coordinated_network(result,
+    highly_connected_g <- CooRTweet::generate_coordinated_network(result,
                                             edge_weight = percentile_edge_weight,
                                             objects = TRUE)
 
