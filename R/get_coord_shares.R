@@ -40,6 +40,7 @@
 #' @importFrom CooRTweet detect_groups
 #' @importFrom CooRTweet generate_coordinated_network
 #' @importFrom CooRTweet prep_data
+#'
 #' @export
 
 get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
