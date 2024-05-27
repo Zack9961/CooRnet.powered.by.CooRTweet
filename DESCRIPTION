@@ -3,9 +3,7 @@ Title: Detect Coordinated Link Sharing Behavior on Social Media
 Version: 0.9
 Author: Alessandro Zacchilli
 Maintainer: The package maintainer <ale.zacchilli99@gmail.com>
-Description: Given a set of URLs, this packages detects coordinated link 
-sharing behavior on social media and outputs the network of entities 
-that performed such behavior, using CooRTweet's functions for the detection.
+Description: Given a set of URLs, this packages detects coordinated link sharing behavior on social media and outputs the network of entities that performed such behavior, using CooRTweet's functions for the detection.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: true
