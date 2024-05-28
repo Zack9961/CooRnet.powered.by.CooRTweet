@@ -16,7 +16,7 @@ You can install CooRnet powered by CooRTweet and CooRTweet from GitHub.
 library("devtools")
 library("CooRTweet")
 library("igraph")
-devtools::install_github("Zack9961/CooRnet_powered_by_CoorTweet")
+devtools::install_github("Zack9961/CooRnet.powered.by.CoorTweet")
 
 ```
 
