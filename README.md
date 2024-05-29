@@ -173,6 +173,7 @@ The project is supported, in part, by a grant by a grant from Social Science Res
 ## References
 
 -   Giglietto, F., Righetti, N., Rossi, L., & Marino, G. (2020). Coordinated Link Sharing Behavior as a Signal to Surface Sources of Problematic Information on Facebook. International Conference on Social Media and Society, 85--91. <https://doi.org/10.1145/3400806.3400817>
+-   Righetti N, Balluff P (2023). CooRTweet: Coordinated Networks Detection on Social Media. R package version 2.0.0, https://github.com/nicolarighetti/CooRTweet.
 
 -   Giglietto, F., Righetti, N., Rossi, L., & Marino, G. (2020). It takes a village to manipulate the media: coordinated link sharing behavior during 2018 and 2019 Italian elections. Information, Communication and Society, 1--25. <https://doi.org/10.1080/1369118X.2020.1739732>
 
