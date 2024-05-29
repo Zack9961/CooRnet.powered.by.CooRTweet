@@ -156,6 +156,22 @@ get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
     highly_connected_g <- CooRTweet::generate_coordinated_network(result,
                                            edge_weight = percentile_edge_weight,
                                            objects = TRUE)
+
+  # Function to check and add missing columns with default values
+    add_missing_columns <- function(df, columns) {
+      missing_columns <- setdiff(columns, names(df))
+      for (col in missing_columns) {
+        df[[col]] <- NA  # Assign NA to missing columns or choose a more appropriate default value
+      }
+      return(df)
+    }
+  
+    # Define the columns we're interested in
+    necessary_columns <- c("account.handle", "account.pageAdminTopCountry", "account.pageDescription", "account.pageCategory", "account.pageCreatedDate")
+  
+    # Add missing columns with NA as default value
+    ct_shares.df <- add_missing_columns(ct_shares.df, necessary_columns)
+    
     #Ricavo le info degli account come farebbe CooRnet
     all_account_info <- ct_shares.df %>%
       dplyr::group_by(account.url) %>%
@@ -276,6 +292,21 @@ get_coord_shares <- function(ct_shares.df, coordination_interval = NULL,
     highly_connected_g <- CooRTweet::generate_coordinated_network(result,
                                             edge_weight = percentile_edge_weight,
                                             objects = TRUE)
+
+    # Function to check and add missing columns with default values
+    add_missing_columns <- function(df, columns) {
+      missing_columns <- setdiff(columns, names(df))
+      for (col in missing_columns) {
+        df[[col]] <- NA  # Assign NA to missing columns or choose a more appropriate default value
+      }
+      return(df)
+    }
+  
+    # Define the columns we're interested in
+    necessary_columns <- c("account.handle", "account.pageAdminTopCountry", "account.pageDescription", "account.pageCategory", "account.pageCreatedDate")
+  
+    # Add missing columns with NA as default value
+    ct_shares.df <- add_missing_columns(ct_shares.df, necessary_columns)
 
     #Ricavo le info degli account come farebbe CooRnet
     all_account_info <- ct_shares.df %>%
